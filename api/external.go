@@ -482,6 +482,10 @@ func (a *API) Provider(ctx context.Context, name string, scopes string) (provide
 		return provider.NewWorkOSProvider(config.External.WorkOS)
 	case "zoom":
 		return provider.NewZoomProvider(config.External.Zoom)
+	case "kakao":
+		return provider.NewKakaoProvider(config.External.Kakao, scopes)
+	case "naver":
+		return provider.NewNaverProvider(config.External.Naver, scopes)
 	default:
 		return nil, fmt.Errorf("Provider %s could not be found", name)
 	}

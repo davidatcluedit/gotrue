@@ -155,6 +155,8 @@ type ProviderConfiguration struct {
 	Email       EmailProviderConfiguration `json:"email"`
 	Phone       PhoneProviderConfiguration `json:"phone"`
 	Zoom        OAuthProviderConfiguration `json:"zoom"`
+	Kakao       OAuthProviderConfiguration `json:"kakao"`
+	Naver       OAuthProviderConfiguration `json:"naver"`
 	IosBundleId string                     `json:"ios_bundle_id" split_words:"true"`
 	RedirectURL string                     `json:"redirect_url"`
 }

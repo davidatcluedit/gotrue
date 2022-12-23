@@ -23,6 +23,8 @@ type ProviderSettings struct {
 	Phone     bool `json:"phone"`
 	SAML      bool `json:"saml"`
 	Zoom      bool `json:"zoom"`
+	Kakao     bool `json:"kakao"`
+	Naver     bool `json:"naver"`
 }
 
 type Settings struct {
@@ -58,6 +60,8 @@ func (a *API) Settings(w http.ResponseWriter, r *http.Request) error {
 			Email:     config.External.Email.Enabled,
 			Phone:     config.External.Phone.Enabled,
 			Zoom:      config.External.Zoom.Enabled,
+			Kakao:     config.External.Kakao.Enabled,
+			Naver:     config.External.Naver.Enabled,
 		},
 
 		DisableSignup:     config.DisableSignup,
